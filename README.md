@@ -173,7 +173,7 @@ KnowFlow features a modern, professional Gradio-based interface with AI-themed d
 ### AI Assistant Tab
 The main chat interface with advanced retrieval settings and real-time conversation management.
 
-![KnowFlow AI Assistant](assets/ui-assistant.png)
+![KnowFlow AI Assistant](KnowFlow/images/S1.png)
 
 **Features Visible:**
 - Conversation panel with full chat history
@@ -193,7 +193,7 @@ The main chat interface with advanced retrieval settings and real-time conversat
 ### Upload Documents Tab
 Professional document ingestion interface supporting both single and batch file uploads with intelligent metadata enrichment.
 
-![KnowFlow Upload Interface](assets/ui-upload.png)
+![KnowFlow Upload Interface](KnowFlow/images/S2.png)
 
 **Features Visible:**
 - Drag-and-drop file upload area (or click to browse)
@@ -215,7 +215,7 @@ Professional document ingestion interface supporting both single and batch file 
 ### System Statistics & About Tab
 Real-time dashboard displaying knowledge base metrics and system information.
 
-![KnowFlow Statistics](assets/ui-stats.png)
+![KnowFlow Statistics](KnowFlow/images/S3.png)
 
 **Displays:**
 - Total documents in knowledge base
@@ -251,11 +251,6 @@ To display the UI screenshots in this README on GitHub and other platforms, foll
 
 2. **Open in browser:** Navigate to `http://localhost:7860`
 
-3. **Take screenshots using your OS tool:**
-   - **Windows:** `Win + Shift + S` (Snipping Tool)
-   - **Mac:** `Cmd + Shift + 4`
-   - **Linux:** `gnome-screenshot` or `Print Screen`
-
 #### Step 2: Save Files to Assets Folder
 Save screenshots in the `assets/` directory with these exact names:
 - `ui-assistant.png` - AI Assistant tab screenshot
@@ -271,11 +266,6 @@ Keep image sizes reasonable for faster loading:
 convert input.png -resize 1200x800 -quality 85 assets/ui-assistant.png
 ```
 
-**Using ffmpeg:**
-```bash
-ffmpeg -i input.png -vf scale=1200:800 assets/ui-assistant.png
-```
-
 **Image Specifications:**
 - **Format:** PNG (lossless)
 - **Resolution:** 1200×800 pixels for tabs, 1200×600 for stats
@@ -283,17 +273,6 @@ ffmpeg -i input.png -vf scale=1200:800 assets/ui-assistant.png
 - **File Size:** Aim for under 500KB per image
 - **Color Profile:** sRGB
 
-#### Step 4: Verify Images Display
-- [ ] All three PNG files present in `assets/` folder
-- [ ] Images display in GitHub README preview
-- [ ] File names match markdown references exactly
-- [ ] Images are clear and professional quality
-
-#### Step 5: Commit to Git
-```bash
-git add assets/ui-*.png
-git commit -m "Add UI screenshots: Assistant, Upload, and Statistics tabs"
-git push origin main
 ```
 
 ---
@@ -534,12 +513,6 @@ docker run -e GOOGLE_API_KEY=your_key -p 8000:8000 knowflow-backend
 | **Total Query Latency** | ~1-2 seconds | End-to-end |
 | **Max Concurrent Users** | 5-10 | Local Chroma limitation |
 
-**Scaling Considerations:**
-- Replace Chroma with **Pinecone** for distributed vector DB
-- Use **async retrieval** for faster queries
-- Implement **caching** for repeated questions
-- Add **rate limiting** for production
-
 ---
 
 ## 🔐 Security Best Practices
@@ -566,73 +539,6 @@ docker run -e GOOGLE_API_KEY=your_key -p 8000:8000 knowflow-backend
 
 ---
 
-## 🧪 Testing
-
-### Test Document Upload
-```bash
-curl -X POST -F "file=@sample.pdf" \
-  -F "department=HR" \
-  -F "doc_type=Policy" \
-  http://localhost:8000/api/ingest/document
-```
-
-### Test Query
-```bash
-curl -X POST http://localhost:8000/api/query/ask \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "What is the company policy?",
-    "role": "general",
-    "top_k": 5
-  }'
-```
-
----
-
-## 📊 Monitoring & Observability
-
-### Collection Statistics
-```bash
-GET /api/ingest/stats
-```
-
-### Query Logs
-- Check `/logs` directory for detailed logs
-- Backend logs: `app.log`
-- Retrieval metrics: Query latency, document count
-
-### Future Enhancements
-- Integration with **Datadog** or **New Relic**
-- Query success rate tracking
-- Document relevance scoring
-- User analytics dashboard
-
----
-
-## 📋 Version History
-
-**Current Version: 2.2.0** (January 17, 2026)
-
-### Recent Changes (v2.2.0)
-- ✅ **Batch Upload Feature** - Upload multiple documents simultaneously
-- ✅ **Mixed File Types** - Upload PDF, DOCX, TXT in single batch
-- ✅ **Shared Metadata** - Apply same metadata to all batch files
-- ✅ **Batch Processing Report** - Detailed success/failure summary
-- ✅ **Improved Upload UI** - Separated single and batch upload sections
-- ✅ **Enhanced UX** - Cleaner layout, better visual hierarchy
-
-### Previous Changes (v2.0.0)
-- ✅ **Replaced Streamlit with Gradio 6.3** - Modern, professional UI
-- ✅ **Migrated to LangChain 0.3.13** - Enables MultiQueryRetriever
-- ✅ **Fixed file extension validation bug** - PDF/DOCX/TXT uploads now work correctly
-- ✅ **Consolidated environment config** - Single .env file
-- ✅ **Updated CORS for Gradio** - Port 7860 support
-- ✅ **Removed deprecated files** - Streamlit app, Docker files
-- ✅ **Updated all documentation** - README, ARCHITECTURE, API docs
-- 📦 **158 packages total** - Added Gradio ecosystem
-
----
-
 ## 🎓 Learning Resources
 
 ### RAG Concepts
@@ -649,158 +555,5 @@ GET /api/ingest/stats
 - [Chroma Documentation](https://docs.trychroma.com/)
 
 ---
-
-## 💡 Troubleshooting
-
-### Issue: "GOOGLE_API_KEY not found"
-**Solution:** 
-1. Get API key: https://makersuite.google.com/app/apikey
-2. Add to `.env` file: `GOOGLE_API_KEY="your_key_here"`
-3. Ensure quotes are around the key value
-
-### Issue: "Backend connection failed" in Gradio
-**Solution:**
-1. Ensure backend is running on port 8000
-2. Check: http://localhost:8000/docs
-3. Verify API key is valid in .env
-4. Check backend terminal for error messages
-
-### Issue: "No documents found in vector store"
-**Solution:**
-1. Upload documents first via Upload tab
-2. Check upload response for errors
-3. Verify file format is supported (PDF, DOCX, TXT)
-4. Check backend logs for processing errors
-
-### Issue: Slow queries
-**Solution:**
-1. Reduce `top_k` parameter (try 3 instead of 5)
-2. Use "Similarity" retriever instead of "Multi-Query"
-3. Check system resources (RAM, CPU)
-4. Verify ChromaDB is persisted locally
-
-### Issue: "429 You exceeded your current quota"
-**Solution:**
-1. Wait 60 seconds for Google API quota reset
-2. Upgrade to paid Gemini API plan
-3. Use different Google API key
-4. Consider local embeddings (HuggingFace)
-
----
-
-## 🤝 Contributing
-
-Contributions welcome! Areas for improvement:
-- Additional document formats (Excel, Markdown)
-- Web UI improvements
-- Performance optimizations
-- Database abstraction (Pinecone, Weaviate)
-- Authentication system
-- Advanced analytics
-
----
-
-## 📝 License
-
-MIT License - See [LICENSE](LICENSE) file for details
-
----
-
-## 💼 Resume Impact
-
-### What Makes This Project Special
-
-**For Software Engineers (SDE):**
-- Clean architecture with separation of concerns
-- RESTful API design with proper validation
-- Production-ready error handling and logging
-- Scalable backend design
-
-**For ML Engineers:**
-- Advanced retrieval strategies (MMR, MultiQuery)
-- Metadata-aware embeddings and chunking
-- Role-based filtering in retrieval pipeline
-- Evaluation-ready RAG system
-
-**For GenAI Specialists:**
-- Prompt engineering best practices
-- Multi-strategy retriever implementation
-- Hallucination reduction through context injection
-- Enterprise RAG architecture
-
-### Copy-Paste Resume Bullets
-
-> • Built **KnowFlow**, an enterprise **Retrieval-Augmented Generation (RAG) system** using **LangChain 0.3, Gemini AI, and ChromaDB**, enabling accurate querying of internal documents with **99% context-grounded accuracy**.
-
-> • Implemented **multi-format document ingestion** (PDF/DOCX/TXT) with **batch upload capability** supporting multiple files simultaneously, **metadata-aware chunking**, **MMR + MultiQuery retrievers**, and **role-based access control**.
-
-> • Designed **FastAPI backend** with async document processing and **professional Gradio frontend** with chat history, real-time conversation tracking, and batch processing reports.
-
-> • Leveraged **LangChain 0.3** framework with **MultiQueryRetriever** for query expansion, achieving higher recall through automatic query variation generation.
-
-> • Reduced hallucinations through **context injection, source citation, and prompt engineering**, ensuring all answers are grounded in actual documents.
-
-> • Deployed **AI-themed Gradio 6.3 interface** with persistent chat history, conversation export (JSON), batch document upload, and modern dark theme for professional user experience.
-
----
-
-## 🎯 Future Roadmap
-
-- [ ] **Phase 1:** Production deployment (current)
-- [ ] **Phase 2:** Multi-document reasoning and cross-references
-- [ ] **Phase 3:** Fine-tuned embeddings for domain-specific accuracy
-- [ ] **Phase 4:** GraphRAG for hierarchical document structures
-- [ ] **Phase 5:** Real-time document sync and auto-refresh
-- [ ] **Phase 6:** Advanced analytics and insights dashboard
-- [ ] **Phase 7:** Integration with enterprise systems (Slack, Teams, Jira)
-
----
-
-## ❓ FAQ
-
-**Q: Is this free to use?**
-A: Yes! Gemini and Chroma are free. Only pay if you scale beyond free tier limits.
-
-**Q: How many documents can I store?**
-A: Depends on RAM. Local Chroma can handle 50K+ documents with 8GB RAM.
-
-**Q: Can I use with non-English documents?**
-A: Yes, Gemini supports 100+ languages.
-
-**Q: How accurate are the answers?**
-A: 95%+ accurate when documents are well-structured. Quality depends on document clarity.
-
-**Q: Can I deploy on mobile?**
-A: Not directly. Use via REST API from mobile app.
-
----
-
-## 📞 Support & Documentation
-
-- **API Reference:** [docs/API.md](docs/API.md) - Complete API documentation
-- **Architecture:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) - System design details
-- **Troubleshooting:** See "Troubleshooting" section above
-- **FAQ:** Review FAQ section above
-
----
-
-## 🔗 Repository
-
-This project is ready for version control. Key files:
-- `README.md` - This documentation
-- `docs/API.md` - API reference
-- `docs/ARCHITECTURE.md` - Architecture details
-- `backend/` - FastAPI backend code
-- `frontend/` - Gradio frontend code
-- `requirements.txt` - All dependencies
-- `.env` - Configuration (update GOOGLE_API_KEY)
-
----
-
-**KnowFlow - Enterprise RAG System**
-
-Version: **2.2.0**  
-Status: **Production Ready**  
-Last Updated: January 2026
 
 Built with LangChain 0.3 • FastAPI • Gradio • ChromaDB • Google Gemini
