@@ -404,10 +404,6 @@ KnowFlow/
 
 ## 🔌 API Reference
 
-### Health Check
-```bash
-GET /api/query/health
-```
 
 ### Upload Document
 ```bash
