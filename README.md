@@ -4,7 +4,6 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.128-green)](https://fastapi.tiangolo.com/)
 [![LangChain](https://img.shields.io/badge/LangChain-0.3.13-purple)](https://langchain.com/)
 [![Gradio](https://img.shields.io/badge/Gradio-6.3-orange)](https://gradio.app/)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 **KnowFlow** is an enterprise-grade Retrieval-Augmented Generation (RAG) system that transforms internal documents into an intelligent knowledge assistant. Employees can query company policies, SOPs, manuals, and guides using natural language and receive accurate, context-grounded, hallucination-free responses.
 
