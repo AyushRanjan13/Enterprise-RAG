@@ -1,0 +1,167 @@
+REMOTE WORK STANDARD OPERATING PROCEDURE
+
+Version: 2.0
+Last Updated: January 2024
+
+1. OVERVIEW
+   This SOP defines guidelines for remote work (work from home / WFH) to ensure 
+   productivity, security, and employee well-being.
+
+2. ELIGIBILITY
+
+   Who can work remotely:
+   - All permanent employees
+   - Contract employees (after 3 months)
+   - Excludes: Operations, Facilities, Security staff
+   
+   Requirements:
+   - Minimum 3 months tenure
+   - Satisfactory performance rating
+   - Manager approval required
+   - Stable internet connection
+
+3. REMOTE WORK SCHEDULE
+
+   Frequency:
+   - 2-3 days per week (flexible with manager)
+   - Fixed or rotating schedule can be agreed
+   - Upto 2 weeks continuous for important projects
+
+   Core Hours:
+   - 10:00 AM to 3:00 PM (IST) - Must be available
+   - All meetings scheduled within core hours
+   - Team coordination calls: 11:00 AM daily
+   - Project stand-ups: as per team schedule
+
+   After Hours:
+   - No expectation to work after 6:00 PM
+   - On-call rotations: separate policy applies
+   - Weekend work: subject to compensation policy
+
+4. EQUIPMENT & SETUP
+
+   Company Provided:
+   - Laptop (MacBook Pro / Dell XPS provided)
+   - External monitor (optional, upon request)
+   - Keyboard, mouse, docking station
+   - Webcam and microphone (if needed)
+   - VPN access credentials
+
+   Employee Responsibility:
+   - Maintain equipment in good condition
+   - Return equipment within 1 week of termination
+   - Use only company laptop for work
+   - Install security updates promptly
+
+   Internet & Utilities:
+   - Company reimburses: $50 per month for internet
+   - Electricity: personal responsibility
+   - Submission: Monthly internet bill to Finance
+
+5. SECURITY REQUIREMENTS
+
+   Mandatory:
+   - Use VPN for all company resources
+   - Lock screen when away (Windows + L)
+   - Use company-provided VPN on personal WiFi
+   - Enable two-factor authentication
+   - No screen sharing of sensitive data
+   - Keep password confidential
+   - Report security incidents to IT
+
+   Workspace:
+   - Private space preferred
+   - No co-working without approval
+   - Do not work in public areas
+   - Background check for video calls
+
+6. COMMUNICATION GUIDELINES
+
+   Expected Response Time:
+   - Slack/Email: Within 2 hours during core hours
+   - Urgent: Escalate to manager
+   - Out of office: Set auto-responder
+   - Update status in Slack hourly
+
+   Tools:
+   - Slack: Primary communication
+   - Email: Official documents only
+   - Video calls: 10 AM - 4 PM only
+   - Do not share passwords via email
+
+7. PERFORMANCE EXPECTATIONS
+
+   Same as office:
+   - Deliverables on schedule
+   - Project participation expected
+   - Meetings mandatory
+   - Response to urgent requests
+
+   Monitoring:
+   - Project management tools track progress
+   - No monitoring software installed
+   - Periodic check-ins with manager
+   - Annual performance review unchanged
+
+8. REPORTING & DOCUMENTATION
+
+   Daily:
+   - Log work hours in timesheet
+   - Update project status
+   - Share blockers or concerns
+   
+   Weekly:
+   - Team sync meeting: Thursdays 11 AM
+   - 1-on-1 with manager: Scheduled
+   - Status report: Friday end-of-day
+
+9. POLICY VIOLATIONS
+
+   Consequences:
+   - 1st violation: Verbal warning
+   - 2nd violation: Written warning + suspension of WFH
+   - 3rd violation: Disciplinary action up to termination
+   
+   Examples:
+   - Working without VPN
+   - Not attending core hours
+   - Sharing credentials
+   - Working outside policy hours excessively
+
+10. EXCEPTIONS & SPECIAL CASES
+
+    Approved Scenarios:
+    - Project launch phase: 5 days/week
+    - Client meetings: In-office required
+    - Team building: In-office required
+    - Technology issues: 1 day office alternative provided
+
+11. BENEFITS OF REMOTE WORK
+
+    For Company:
+    - Increased productivity
+    - Cost savings on office space
+    - Better talent retention
+    - Flexible work environment
+
+    For Employee:
+    - Reduced commute time
+    - Better work-life balance
+    - Flexible schedule within core hours
+    - Less office distractions
+
+12. CONTACT & ESCALATION
+
+    Questions:
+    - Manager: First point of contact
+    - HR Department: hr@company.com
+    - IT Support: it@company.com
+    
+    Emergency:
+    - Call manager directly
+    - HR on-call: Check emergency contact list
+
+Approval: 
+- Signed: Chief Operating Officer
+- Date: January 15, 2024
+- Review: Annually or as needed
